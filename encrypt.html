@@ -1,0 +1,31 @@
+<!-- Determines file type, HTML -->
+<!DOCTYPE html>
+<!-- Opening HTML tag -->
+<html>
+  <!-- Opening HEAD tag = Head of document-->
+  <head>
+    <!-- Determines the character set of the document -->
+    <meta charset="utf-8">
+    <!-- Giving the document a title -->
+    <title>Encryption</title>
+    <!-- Referencing the scrabbleInput.js file -->
+    <script src="js/encryptTemplate.js"></script>
+    <!-- Closing HEAD tag -->
+  </head>
+  <!-- Opening BODY tag = Body of document -->
+  <body>
+    <h1>Encryption/Decryption</h1>
+    <!-- Tag INPUT creates a place for users to "type" a response, "Form Field" -->
+    <input type="text" placeholder="Type " id="inputId">
+    <!-- Tag BUTTON creates a button labeled "Encrypt" that returns an encrypted copy of their response to the user -->
+    <button type="button" onclick="encrypt;">Encrypt</button>
+    <!-- Tag BUTTON creates a button labeled "Decrypt" that returns an decrypted copy of their encrypted response to the user -->
+    <button type="button" onclick="decrypt;">Decrypt</button>
+    <!-- Tag BUTTON creates a button labeled "Show Encryption Key" that displays a table with the key to the Caesar Cipher -->
+    <button type="button" onclick="showEncryptionKey;">Show Encryption Key</button>
+    <!-- Tag P(aragraph) creates the body text of document -->
+    <p id="display">Enter message for encryption or decryption</p>   
+    <!-- Closing BODY tag -->
+  </body>
+<!-- Closing HTML tag -->
+</html>

@@ -1,0 +1,16 @@
+h1 {
+    font-size: 80px;
+    color: blue;
+    float: inline-start;
+}
+
+p {
+    font-size: 40px;
+    color: teal;
+    float: inline-start;
+}
+
+img {
+    image-orientation: flip;
+    border-image: blue;
+}
