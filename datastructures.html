@@ -1,0 +1,31 @@
+<DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <title>Data Structures</title>
+            <script>
+                let dog = {
+                    name: "Jack",
+                    gender: "Male",
+                    material: "Natural",
+                    age: 7,
+                    type: "Rhodesian Ridgeback"
+                }
+                
+                dog.Name = "Jack";
+
+                console.log(dog.Name);
+
+                function input(){
+                    return document.getElementById("inputId").value;
+                }
+                function output(){
+                    document.getElementById("display1").innerHTML = content;
+                }
+            </script>
+        </head>
+    </html>
+    <body>
+        <input type="text" placeholder="Type" id="inputId">
+        <button type="button" onclick="input();">Input</button>
+    </body>

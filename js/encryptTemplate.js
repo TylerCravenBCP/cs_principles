@@ -19,7 +19,7 @@ function encrypt(){
         //let val be the input given by the user
         let val = input.charCodeAt(i);
         //Adding 5 (ASCII) to each character
-        val += 5;
+        val += 7;
         //Returning the message
         inputEncrypt = String.fromCharCode(val);
     }
@@ -33,7 +33,7 @@ function decrypt(){
         //let val be the input given by the user
         let val = input.charCodeAt(i);
         //Subtracting 5 (ASCII) to each character
-        val -= 5;
+        val -= 7;
         //Returning the message
         inputEncrypt = String.fromCharCode(val);
     }
@@ -42,13 +42,9 @@ function decrypt(){
 }
 
 function showEncryptionKey(){
-    
-    
+    //Printing the equivalent of characters in message
+    console.log("a=t, b=u, c=v, d=w, e=x, f=y, g=z, h=a, i=b, j=c, k=d, l=e, m=f, n=g, o=h, p=i, q=j, r=k, s=l, t=m, u=n, v=o, w=p, x=q, y=r, z=s")
 }
-
-// global variables go at the top
-let Letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "\n"];
-let encryptKey = ["t", "u", "v", "w", "x", "y", "z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "\n"];
 
 // this is how you can push things into an array that is empty...
 let myArr = [];
@@ -77,7 +73,7 @@ function getInputValue() {
     // Displaying the value
 }
 
-//New function
+//New function tries to find the encrypted value
 function doSomething(){
     let encryptedValue = encrypt(getInputValue())
     alert("Encrypted value is " + encryptedValue);
@@ -87,6 +83,7 @@ function doSomething(){
 let eMsg = "secret message";
 
 //access element on page and alter it dynamically
+//Creating and modifying different displays
 function output(content){
     document.getElementById("display1").innerHTML = content;
     document.getElementById("display2").innerHTML = eMsg;
@@ -100,6 +97,4 @@ let currentWord = "";
 for (i = 0, n = word.length; i < n; i++){
     let Letters = encryptKey[i];
     currentWord = currentWord + encryptKey;
-    
 }
-
