@@ -1,31 +1,97 @@
 <DOCTYPE html>
-    <html>
-        <head>
-            <meta charset="utf-8">
-            <title>Data Structures</title>
-            <script>
-                let dog = {
-                    name: "Jack",
-                    gender: "Male",
-                    material: "Natural",
-                    age: 7,
-                    type: "Rhodesian Ridgeback"
-                }
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Data Structures</title>
+        <script>
+            let dog = {
+                name: "Jack",
+                gender: "Male",
+                material: "Natural",
+                age: 8,
+                type: "Rhodesian Ridgeback"
+            }
+
+            dog.Name = "Jack";
+
+            console.log(dog.Name);
+
+            let hamster = {
+                name: "",
+                gender: "Male",
+                material: "Natural",
+                age: 2,
+                type: "Chesapeake Bay Retriever",
+            }
                 
-                dog.Name = "Jack";
+            hamster.Name = "";
+            
+            console.log(hamster.Name);
 
-                console.log(dog.Name);
+            let cat = {
+                name: "Michaelangelo",
+                gender: "Female",
+                material: "Natural",
+                age: 16,
+                type: "Calico",
+            }
 
-                function input(){
-                    return document.getElementById("inputId").value;
+            cat.Name = "Michaelangelo"
+
+            console.log(cat.Name);
+            
+            function input(){
+                return document.getElementById("inputId").value;
+            }
+
+            function hamster(name, age){
+                this.name = name;
+                this.age = age;
+            }
+
+            class Hamster{
+                constructor(name, age){
+                    this.name = name;
+                    this.age = age;
+                    this.isAlive = true;
+                    this.favoriteToys = ["Wheel", "Marble", "Cage"]
                 }
-                function output(){
-                    document.getElementById("display1").innerHTML = content;
+                squeak(){
+                    console.log("SQUEAK, SQUEAK");
                 }
-            </script>
-        </head>
-    </html>
-    <body>
-        <input type="text" placeholder="Type" id="inputId">
-        <button type="button" onclick="input();">Input</button>
-    </body>
+                run(){
+                }
+                update(){
+                }
+                draw(){
+                }
+            }
+
+            //Create instance of hamster construction function
+            let myHamster = new hamster("Doofus", 2);
+            //Create instance of Hamster class
+            let yourHamster = new Hamster("Roofus", 4);
+            //Call method from yourHamster instance
+            yourHamster.squeak();
+            console.log(myHamster.name);
+            console.log(myHamster.age);
+            console.log(yourHamster.name);
+            console.log(yourHamster.age);
+
+            function process(){
+                hamster.Name = input();
+                output("the hamsters name is now..." + hamster.Name);
+            }
+
+            function output(){
+                document.getElementById("display1").innerHTML = content;
+            }
+        </script>
+    </head>
+<body>
+    <input type="text" placeholder="Type" id="inputId">
+    <button type="button" onclick="input();">Input</button>
+    <p>Output:</p>
+    <p id="display1">Output will replace this...</p>
+</body>
+</html>
